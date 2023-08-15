@@ -5,7 +5,7 @@
   */
 int main(void)
 {
-int count, i, j, m;
+unsigned long count, i, j, m;
 i = 0;
 j = 1;
 for (count = 0; count < 50; count++)
@@ -13,7 +13,7 @@ for (count = 0; count < 50; count++)
 	m = i + j;
 	i = j;
 	j = m;
-	printf("%d", m);
+	printf("%lu", m);
 	if (count == 49)
 		putchar('\n');
 	else
