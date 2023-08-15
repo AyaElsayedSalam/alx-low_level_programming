@@ -9,14 +9,11 @@
 **/
 int _islower(int c)
 {
-int result = 1;
-c += '0';
-if ((c >= 'A') && (c <= 'Z'))
-result = 0;
-else if ((c >= 'a') && (c <= 'z'))
-result = 0;
-else
+int result = -1;
+if ((c >= 'a') && (c <= 'z'))
 result = 1;
+else
+result = 0;
 
 return (result);
 }
