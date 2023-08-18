@@ -15,10 +15,10 @@ printf("FizzBuzz ");
 
 else if ((i % 5) == 0)
 {
-if( i == 100)
+if (i == 100)
 printf("Buzz");
 
-else 
+else
 printf("Buzz ");
 }
 else if ((i % 3) == 0)
