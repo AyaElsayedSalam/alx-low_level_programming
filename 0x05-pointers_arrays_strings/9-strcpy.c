@@ -11,16 +11,12 @@ int i, len;
 while (src[len] != '\0')
 len++;
 
-if (len == 0)
-{
-return ('\0');
-}
-else
-{
-for (i = 0 ; i <= len; i++)
+
+for (i = 0 ; i < len; i++)
 {
 dest[i] = src[i];
 }
+dest[i] = '\0';
 return (dest);
 }
-}
+
