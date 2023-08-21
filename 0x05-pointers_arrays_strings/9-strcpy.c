@@ -1,5 +1,4 @@
 #include "main.h"
-#include<stdio.h>
 /**
 * _strcpy - a function that copy string
  * Return: void
@@ -13,10 +12,15 @@ while (src[len] != '\0')
 len++;
 
 if (len == 0)
-return;
+{
+return ('\0');
+}
+else
+{
 for (i = 0 ; i <= len; i++)
 {
 dest[i] = src[i];
 }
 return (dest);
+}
 }
