@@ -1,4 +1,5 @@
-#include "_putchar.h"
+#include "main.h"
+#include <unistd.h>
 /**
 * _putchar - print character per time
  * Return: integer
