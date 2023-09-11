@@ -1,7 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-char *_strcpy(char *dest, char *src);
-int _strlen(char *s);
 /**
  * new_dog - a function that add new dog
  *
@@ -13,37 +11,37 @@ int _strlen(char *s);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *n_dog;
-int len_name = 0, len_owner = 0;
-if ((name != NULL) || (owner != NULL))
-{
+char *cname, *cowner;
+int len_name = 0, len_owner = 0, i = 0;
+if ((name == NULL) || (owner == NULL))
+return (NULL);
 n_dog = malloc(sizeof(dog_t));
 if (n_dog == NULL)
-{
-free(n_dog);
 return (NULL);
-}
-len_name = _strlen(name);
-len_owner = _strlen(owner);
+while (name[len_name])
+len_name++;
+while (owner[len_owner])
+len_owner++;
+cname = malloc(len_name + 1);
+cowner = malloc(len_owner + 1);
+if (cname == NULL)
+return (NULL);
 
-n_dog->name = malloc(sizeof(char) * len_name);
-if (n_dog->name == NULL)
-{
-free(n_dog->name);
-free(n_dog);
+if (cowner == NULL)
 return (NULL);
-}
 
-n_dog->owner = malloc(sizeof(char) * len_owner);
-if (n_dog->owner == NULL)
+for (i = 0 ; i < len_name ; i++)
 {
-free(n_dog->owner);
-free(n_dog);
-return (NULL);
+cname[i] = name[i];
 }
+cname[i] = '\0';
+for (i = 0; i < len_owner ; i++)
+{
+cowner[i] = owner[i];
+}
+cowner[i] = '\0';
 n_dog->age = age;
-n_dog->name = _strcpy(n_dog->name, name);
-n_dog->owner = _strcpy(n_dog->owner, owner);
-}
-
+n_dog->name = cname;
+n_dog->owner = cowner;
 return (n_dog);
 }
