@@ -18,8 +18,6 @@ d->name = "(nil)";
 if (d->owner == NULL)
 d->owner = "(nil)";
 
-else
-{
+
 printf("Name: %s\nAge: %6f\nOwner: %s\n", d->name, d->age, d->owner);
-}
 }
