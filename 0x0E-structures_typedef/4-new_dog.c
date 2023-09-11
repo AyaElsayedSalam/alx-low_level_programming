@@ -21,16 +21,17 @@ n_dog = malloc(sizeof(dog_t));
 if (n_dog == NULL)
 return (NULL);
 
-while (name[len_name] != '\0')
+while (name[len_name])
 len_name++;
 
-while (owner[len_owner] != '\0')
+while (owner[len_owner])
 len_owner++;
 
 cname = malloc(len_name + 1);
 cowner = malloc(len_owner + 1);
 
-
+if ((cname == NULL) || (cowner == NULL))
+return (NULL);
 
 for (i = 0 ; i < len_name ; i++)
 {
