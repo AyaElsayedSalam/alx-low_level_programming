@@ -33,12 +33,12 @@ cowner = malloc(len_owner + 1);
 if ((cname == NULL) || (cowner == NULL))
 return (NULL);
 
-for (i = 0 ; i < len_name ; i++)
+for (i = 0 ; i < name[i] ; i++)
 {
 cname[i] = name[i];
 }
 cname[i] = '\0';
-for (i = 0; i < len_owner ; i++)
+for (i = 0; i < owner[i] ; i++)
 {
 cowner[i] = owner[i];
 }
