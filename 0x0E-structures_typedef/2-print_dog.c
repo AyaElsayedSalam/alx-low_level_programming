@@ -18,6 +18,6 @@ printf("%s\n", "nil");
 
 else
 {
-printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
+printf("Name: %s\nAge: %6f\nOwner: %s\n", d->name, d->age, d->owner);
 }
 }
