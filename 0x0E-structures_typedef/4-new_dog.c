@@ -2,7 +2,6 @@
 #include <stdlib.h>
 /**
  * new_dog - a function that add new dog
- *
  * Return: Always 0.
  * @name: pointer to the dog name
  * @age: age of the dog
@@ -17,7 +16,10 @@ if ((name == NULL) || (owner == NULL))
 return (NULL);
 n_dog = malloc(sizeof(dog_t));
 if (n_dog == NULL)
+{
+free(n_dog);
 return (NULL);
+}
 while (name[len_name])
 len_name++;
 while (owner[len_owner])
@@ -25,11 +27,15 @@ len_owner++;
 cname = malloc(len_name + 1);
 cowner = malloc(len_owner + 1);
 if (cname == NULL)
+{
+free(cname);
 return (NULL);
-
+}
 if (cowner == NULL)
+{
+free(cowner);
 return (NULL);
-
+}
 for (i = 0 ; i < len_name ; i++)
 {
 cname[i] = name[i];
