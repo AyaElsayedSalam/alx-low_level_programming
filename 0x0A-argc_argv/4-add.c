@@ -27,6 +27,6 @@ printf("%s\n", "Error");
 return (1);
 }
 }
-printf("%i\n", add);
+printf("%d\n", add);
 return (0);
 }
