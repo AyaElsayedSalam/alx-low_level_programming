@@ -11,11 +11,8 @@
 int main(int argc, char *argv[])
 {
 int add = 0, i;
-if (argc == 1)
+if (argc > 1)
 {
-printf("%d\n", 0);
-return (0);
-}
 for (i = 1 ; i < argc ; i++)
 {
 if ((*(argv[i]) > 47) && (*(argv[i]) < 57))
@@ -28,5 +25,10 @@ return (1);
 }
 }
 printf("%d\n", add);
+}
+else
+{
+printf("%d\n", 0);
+}
 return (0);
 }
