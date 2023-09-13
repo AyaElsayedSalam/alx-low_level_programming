@@ -10,7 +10,8 @@
  **/
 int main(int argc, char *argv[])
 {
-unsigned int add = 0, i;
+unsigned int add = 0;
+int i;
 char *check;
 if (argc > 1)
 {
