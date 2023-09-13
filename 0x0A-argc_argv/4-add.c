@@ -11,13 +11,16 @@
 int main(int argc, char *argv[])
 {
 int add = 0, i;
+char *check;
 if (argc > 1)
 {
 for (i = 1 ; i < argc ; i++)
 {
-if ((*(argv[i]) >= 48) && (*(argv[i]) <= 57))
+check = argv[i];
+if ((*check >= 48) && (*check <= 57))
+{
 add += atoi(argv[i]);
-
+}
 else
 {
 printf("%s\n", "Error");
