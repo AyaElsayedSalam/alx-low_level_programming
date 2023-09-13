@@ -15,7 +15,7 @@ if (argc > 1)
 {
 for (i = 1 ; i < argc ; i++)
 {
-if ((*(argv[i]) > 47) && (*(argv[i]) < 57))
+if ((*(argv[i]) > 48) && (*(argv[i]) < 57))
 add += atoi(argv[i]);
 
 else
