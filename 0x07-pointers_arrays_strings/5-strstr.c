@@ -9,15 +9,16 @@
 */
 char *_strstr(char *haystack, char *needle)
 {
-int i, ch;
-for (i = 0 ; *(haystack + i) ; i++)
+int ch;
+while (*haystack)
 {
-if (haystack[i] == *needle)
+if (*haystack == *needle)
 {
-haystack += i;
 ch = checkSubstring(haystack, needle);
 break;
 }
+else
+haystack++;
 }
 
 if (ch == 1)
