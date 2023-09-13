@@ -10,22 +10,23 @@
  **/
 int main(int argc, char *argv[])
 {
-int add = 0, i;
+unsigned int add = 0, i;
 char *check;
 if (argc > 1)
 {
 for (i = 1 ; i < argc ; i++)
 {
 check = argv[i];
-if ((*check >= 48) && (*check <= 57))
+while (*check != 0)
 {
-add += atoi(argv[i]);
-}
-else
+if (*check < 47 || *check > 57)
 {
 printf("%s\n", "Error");
 return (1);
 }
+check++;
+}
+add += atoi(argv[i]);
 }
 printf("%d\n", add);
 }
