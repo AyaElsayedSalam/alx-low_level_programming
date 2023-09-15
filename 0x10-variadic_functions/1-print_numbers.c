@@ -15,11 +15,10 @@ if (n > 0)
 {
 	if ((separator != NULL) && (*separator != 0))
 	{
-		
 		for (i = 0; i < (n - 1); ++i)
 			printf("%d%s", va_arg(args, int), separator);
 
-		printf("%d\n", va_arg(args, int));
+		printf("%d", va_arg(args, int));
 	}
 	else
 	{
@@ -27,8 +26,9 @@ if (n > 0)
 		for (i = 0; i < (n - 1); ++i)
 			printf("%d", va_arg(args, int));
 
-		printf("%d\n", va_arg(args, int));
+		printf("%d", va_arg(args, int));
 	}
 }
 	va_end(args);
+	printf("\n");
 }
